@@ -2,14 +2,10 @@
 
 Grab Tumblr posts
 
----
-
 
 ## Note
 
 To avoid implementing entire OAuth flow, *Tumblr_grabbr* uses [Tumblr API v1](http://www.tumblr.com/docs/en/api/v1). Please note that this lib can be broken any time when they decide to deprecate *old* API.
-
----
 
 
 ## Requirements
@@ -18,15 +14,10 @@ To avoid implementing entire OAuth flow, *Tumblr_grabbr* uses [Tumblr API v1](ht
 - cURL
 
 
----
-
-
 ## Installation
 
 - Copy *tumblr_grabbr.php* to *libraries* folder
 
-
----
 
 ## Basic usage
 
@@ -54,7 +45,6 @@ To avoid implementing entire OAuth flow, *Tumblr_grabbr* uses [Tumblr API v1](ht
 		$post = Tumblr_grabbr::grab_one('demo', 192341);
 		if ($post){ ... }
 
----
 
 ## View
 	
@@ -71,15 +61,9 @@ In your *blog_listing.php* view file, play with `$data['posts']`
 	}
 
 
----
-
-
 ## Post type & properties
 
 See [Tumblr API v1 docs](http://www.tumblr.com/docs/en/api/v1)
-
-
----
 
 
 ## Pagination
@@ -98,8 +82,6 @@ See [Tumblr API v1 docs](http://www.tumblr.com/docs/en/api/v1)
 		// echo $data['pagination']->next();
 	}
 
-
----
 
 ## Summary, Thumbnail support
 
