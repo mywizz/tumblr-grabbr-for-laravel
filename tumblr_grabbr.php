@@ -7,12 +7,12 @@
  */
 
 class Tumblr_grabbr {
+	
 	/**
 	 * Cache lifetime
 	 *
 	 * @var  integer  minutes to live
 	 */
-	
 	public static $CACHE_LIFETIME = 60;
 	
 	// ---------------------------------------------------------------------
@@ -54,7 +54,7 @@ class Tumblr_grabbr {
 			return NULL;
 		}
 		
-		$data = json_decode(str_replace(array('var tumblr_api_read = ', ';'), '', $res), TRUE);
+		$data = json_decode(str_replace('var tumblr_api_read = ', '', rtrim($res, ";\n")), TRUE);
 
 		foreach ($data['posts'] as $k => $post)
 		{
@@ -110,7 +110,7 @@ class Tumblr_grabbr {
 			return NULL;
 		}
 		
-		$data = json_decode(str_replace(array('var tumblr_api_read = ', ';'), '', $res), TRUE);
+		$data = json_decode(str_replace('var tumblr_api_read = ', '', rtrim($res, ";\n")), TRUE);
 		$data['pagination'] = FALSE;
 		return empty($data['posts']) ? NULL : $data['posts'][0];
 	}
